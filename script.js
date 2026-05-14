@@ -94,10 +94,9 @@
     },
 
     settings: {
-      get(theme = 'light') {
+      get() {
         const settings = Store.get('settings', {});
         return {
-          theme: settings.theme || theme,
           fontSize: settings.fontSize || 'md',
           dyslexiaMode: settings.dyslexiaMode || false,
           highContrast: settings.highContrast || false,
@@ -588,7 +587,6 @@
     init() {
       this.handleScroll();
       this.handleMobileNav();
-      this.handleTheme();
       this.updateActiveLink();
       window.addEventListener('scroll', this.handleScroll.bind(this), { passive: true });
     },
@@ -617,33 +615,6 @@
       DOM.$$('.mobile-nav-link').forEach((link) => {
         link.addEventListener('click', toggle);
       });
-    },
-
-    handleTheme() {
-      const toggle = DOM.$('.theme-toggle');
-      if (!toggle) return;
-
-      const saved = Store.settings.get().theme;
-      this.applyTheme(saved);
-
-      toggle.addEventListener('click', () => {
-        const current = document.documentElement.getAttribute('data-theme') || 'light';
-        const next = current === 'dark' ? 'light' : 'dark';
-        this.applyTheme(next);
-        Store.settings.update('theme', next);
-      });
-    },
-
-    applyTheme(theme) {
-      if (theme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
-        document.documentElement.removeAttribute('data-theme');
-      }
-      const icon = DOM.$('.theme-toggle i');
-      if (icon) {
-        icon.className = theme === 'dark' ? 'bi bi-sun-fill' : 'bi bi-moon-fill';
-      }
     },
 
     updateActiveLink() {
@@ -2275,16 +2246,16 @@
 
       particlesJS('particles-canvas', {
         particles: {
-          number: { value: 60, density: { enable: true, value_area: 800 } },
-          color: { value: '#4F46E5' },
+          number: { value: 50, density: { enable: true, value_area: 800 } },
+          color: { value: '#6366F1' },
           shape: { type: 'circle' },
-          opacity: { value: 0.2, random: true },
-          size: { value: 3, random: true },
+          opacity: { value: 0.15, random: true },
+          size: { value: 2, random: true },
           line_linked: {
             enable: true,
             distance: 150,
-            color: '#4F46E5',
-            opacity: 0.1,
+            color: '#6366F1',
+            opacity: 0.06,
             width: 1,
           },
           move: {
