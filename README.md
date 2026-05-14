@@ -288,7 +288,7 @@ px-16: 4rem    |  px-20: 5rem    |  px-24: 6rem
 
 ```bash
 # 1. Clone
-git clone https://github.com/username/wikipelajar.git && cd wikipelajar
+git clone https://github.com/salzcill-cmd/WikiPelajar-AI.git && cd wikipelajar
 
 # 2. Buka (pilih salah satu)
 open index.html                          # macOS
@@ -306,7 +306,7 @@ npx serve .                              # via Serve → http://localhost:3000
 
 ```bash
 # Clone repository
-git clone https://github.com/username/wikipelajar.git
+git clone https://github.com/salzcill-cmd/WikiPelajar-AI.git
 cd wikipelajar
 
 # Opsi 1: VS Code Live Server (Recommended)
@@ -540,7 +540,7 @@ Kontribusi selalu disambut dengan tangan terbuka! 🎉
 ```bash
 # 1. Fork repository
 # 2. Clone fork kamu
-git clone https://github.com/username/wikipelajar.git
+git clone https://github.com/salzcill-cmd/WikiPelajar-AI.git
 cd wikipelajar
 
 # 3. Buat branch fitur
