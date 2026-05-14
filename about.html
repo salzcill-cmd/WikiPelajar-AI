@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang - WikiPelajar AI</title>
+  <meta name="description" content="Tentang WikiPelajar AI - platform ensiklopedia pintar untuk pelajar Indonesia.">
+  <link rel="canonical" href="https://wikipelajar.vercel.app/about.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <style>
+    .faq-question { cursor: pointer; padding: 1rem 1.25rem; border-radius: var(--radius-xl); background: var(--glass-bg); border: 1px solid var(--glass-border); transition: all var(--transition-base); margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; font-weight: 600; font-size: var(--text-base); }
+    .faq-question:hover { border-color: var(--glass-border-light); }
+    .faq-question.active { border-color: var(--primary-light); background: var(--primary-gradient-soft); }
+    .faq-question i { transition: transform var(--transition-base); }
+    .faq-question.active i { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow); padding: 0 1.25rem; font-size: var(--text-sm); color: var(--gray); line-height: 1.7; }
+    .faq-answer.open { max-height: 300px; padding: 0 1.25rem 1rem; }
+    .tech-item { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 500; transition: all var(--transition-base); }
+    .tech-item:hover { border-color: var(--primary-light); background: var(--primary-gradient-soft); color: var(--primary); transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Lompat ke konten utama</a>
+  <div class="loading-screen">
+    <div class="loading-logo">WikiPelajar</div>
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Memuat...</div>
+  </div>
+  <div class="cursor-glow"></div>
+  <div id="particles-canvas"></div>
+  <div class="toast-container"></div>
+  <div class="mobile-nav-overlay"></div>
+
+  <nav class="mobile-nav" aria-label="Navigasi mobile">
+    <a href="index.html" class="mobile-nav-link"><i class="bi bi-house"></i> Beranda</a>
+    <a href="search.html" class="mobile-nav-link"><i class="bi bi-search"></i> Cari</a>
+    <a href="explore.html" class="mobile-nav-link"><i class="bi bi-compass"></i> Jelajahi</a>
+    <a href="trending.html" class="mobile-nav-link"><i class="bi bi-trending-up"></i> Populer</a>
+    <a href="bookmark.html" class="mobile-nav-link"><i class="bi bi-bookmark"></i> Bookmark</a>
+    <a href="quiz.html" class="mobile-nav-link"><i class="bi bi-question-circle"></i> Quiz</a>
+    <a href="about.html" class="mobile-nav-link active"><i class="bi bi-info-circle"></i> Tentang</a>
+  </nav>
+
+  <nav class="navbar" aria-label="Navigasi utama">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div class="brand-icon"><i class="bi bi-book"></i></div>
+        WikiPelajar
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="search.html" class="nav-link">Cari</a>
+        <a href="explore.html" class="nav-link">Jelajahi</a>
+        <a href="trending.html" class="nav-link">Populer</a>
+        <a href="quiz.html" class="nav-link">Quiz</a>
+        <a href="about.html" class="nav-link active">Tentang</a>
+      </div>
+      <div class="nav-actions">
+        <a href="bookmark.html" class="nav-action-btn" aria-label="Bookmark"><i class="bi bi-bookmark"></i></a>
+        <button class="theme-toggle" aria-label="Ganti tema"><i class="bi bi-moon-fill"></i></button>
+        <button class="navbar-toggler" aria-label="Buka menu"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content" class="article-page">
+    <div class="container" style="padding-top:6rem">
+
+      <!-- Hero About -->
+      <div class="text-center" data-aos="fade-up" style="max-width:700px;margin:0 auto 3rem">
+        <span class="section-tag">Tentang Project</span>
+        <h1 class="section-title">WikiPelajar AI</h1>
+        <p class="section-subtitle" style="font-size:var(--text-lg)">
+          Ensiklopedia pintar berbasis Wikipedia yang dirancang khusus untuk pelajar SMP hingga SMA.
+          Kami mengubah cara belajar menjadi pengalaman modern, interaktif, dan menyenangkan.
+        </p>
+      </div>
+
+      <!-- Vision -->
+      <div class="row g-4 mb-5" data-aos="fade-up">
+        <div class="col-md-6">
+          <div class="card feature-card" style="height:100%">
+            <div class="card-icon" style="background:rgba(79,70,229,0.1);color:var(--primary)"><i class="bi bi-eye"></i></div>
+            <h3 class="card-title">Visi</h3>
+            <p class="card-text">Membuat pendidikan berkualitas tinggi dapat diakses oleh setiap pelajar Indonesia melalui teknologi modern dan pengalaman belajar yang menyenangkan.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card feature-card" style="height:100%">
+            <div class="card-icon" style="background:rgba(6,182,212,0.1);color:var(--secondary)"><i class="bi bi-rocket-takeoff"></i></div>
+            <h3 class="card-title">Misi</h3>
+            <p class="card-text">Mengubah Wikipedia menjadi platform belajar yang modern, interaktif, dan mudah dipahami dengan bantuan teknologi AI dan desain terkini.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Detail -->
+      <section style="margin:3rem 0" data-aos="fade-up">
+        <h2 style="font-size:var(--text-2xl);font-weight:800;margin-bottom:1.5rem;text-align:center">Fitur Lengkap</h2>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4">
+            <div class="card" style="height:100%">
+              <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+                <div class="card-icon" style="margin:0;width:40px;height:40px;font-size:1rem"><i class="bi bi-search"></i></div>
+                <h3 style="font-size:1rem;font-weight:700">Pencarian Pintar</h3>
+              </div>
+              <p class="card-text">Pencarian real-time dengan autocomplete, saran pintar, filter kategori, dan riwayat pencarian.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card" style="height:100%">
+              <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+                <div class="card-icon" style="margin:0;width:40px;height:40px;font-size:1rem"><i class="bi bi-robot"></i></div>
+                <h3 style="font-size:1rem;font-weight:700">AI Ringkasan</h3>
+              </div>
+              <p class="card-text">Ringkasan otomatis untuk memahami artikel dengan cepat. Cocok untuk belajar kilat sebelum ujian.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card" style="height:100%">
+              <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+                <div class="card-icon" style="margin:0;width:40px;height:40px;font-size:1rem"><i class="bi bi-bookmark"></i></div>
+                <h3 style="font-size:1rem;font-weight:700">Bookmark</h3>
+              </div>
+              <p class="card-text">Simpan artikel favorit dan lihat riwayat bacaan kapan saja. Belajar jadi lebih terorganisir.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card" style="height:100%">
+              <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+                <div class="card-icon" style="margin:0;width:40px;height:40px;font-size:1rem"><i class="bi bi-question-circle"></i></div>
+                <h3 style="font-size:1rem;font-weight:700">Quiz Interaktif</h3>
+              </div>
+              <p class="card-text">Uji pemahaman dengan quiz dari artikel. Skor dan feedback instan untuk evaluasi belajar.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card" style="height:100%">
+              <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+                <div class="card-icon" style="margin:0;width:40px;height:40px;font-size:1rem"><i class="bi bi-volume-up"></i></div>
+                <h3 style="font-size:1rem;font-weight:700">Baca dengan Suara</h3>
+              </div>
+              <p class="card-text">Dengarkan artikel dibacakan dengan suara natural. Fitur aksesibilitas untuk gaya belajar audio.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card" style="height:100%">
+              <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+                <div class="card-icon" style="margin:0;width:40px;height:40px;font-size:1rem"><i class="bi bi-universal-access"></i></div>
+                <h3 style="font-size:1rem;font-weight:700">Aksesibilitas</h3>
+              </div>
+              <p class="card-text">Mode dyslexia, high contrast, dan ukuran font yang bisa diatur. Belajar nyaman untuk semua.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section style="margin:3rem 0" data-aos="fade-up">
+        <h2 style="font-size:var(--text-2xl);font-weight:800;margin-bottom:1.5rem;text-align:center">Teknologi yang Digunakan</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center">
+          <span class="tech-item"><i class="bi bi-filetype-html"></i> HTML5</span>
+          <span class="tech-item"><i class="bi bi-filetype-css"></i> CSS3</span>
+          <span class="tech-item"><i class="bi bi-filetype-js"></i> JavaScript ES6+</span>
+          <span class="tech-item"><i class="bi bi-bootstrap"></i> Bootstrap 5</span>
+          <span class="tech-item"><i class="bi bi-box"></i> Axios</span>
+          <span class="tech-item"><i class="bi bi-box"></i> AOS</span>
+          <span class="tech-item"><i class="bi bi-box"></i> Particles.js</span>
+          <span class="tech-item"><i class="bi bi-box"></i> GSAP</span>
+          <span class="tech-item"><i class="bi bi-box"></i> Lenis</span>
+          <span class="tech-item"><i class="bi bi-box"></i> Chart.js</span>
+          <span class="tech-item"><i class="bi bi-box"></i> SweetAlert2</span>
+          <span class="tech-item"><i class="bi bi-box"></i> VanillaTilt</span>
+          <span class="tech-item"><i class="bi bi-box"></i> Animate.css</span>
+          <span class="tech-item"><i class="bi bi-box"></i> Typed.js</span>
+          <span class="tech-item"><i class="bi bi-box"></i> Marked</span>
+          <span class="tech-item"><i class="bi bi-cloud"></i> Wikipedia API</span>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" style="margin:3rem 0" data-aos="fade-up">
+        <h2 style="font-size:var(--text-2xl);font-weight:800;margin-bottom:1.5rem;text-align:center">FAQ - Pertanyaan Umum</h2>
+        <div style="max-width:700px;margin:0 auto">
+          <div class="faq-question" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('open')">
+            Apa itu WikiPelajar AI?
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            WikiPelajar AI adalah platform ensiklopedia pintar berbasis Wikipedia yang dirancang khusus untuk pelajar SMP hingga SMA. Kami mengubah pengalaman membaca Wikipedia menjadi lebih modern, interaktif, dan nyaman dengan tambahan fitur AI.
+          </div>
+
+          <div class="faq-question" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('open')">
+            Apakah WikiPelajar AI gratis?
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Ya! WikiPelajar AI gratis selamanya. Kami percaya pendidikan berkualitas harus bisa diakses oleh semua orang tanpa biaya.
+          </div>
+
+          <div class="faq-question" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('open')">
+            Dari mana sumber artikelnya?
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Semua artikel berasal dari Wikipedia melalui API resmi mereka. Kami mengambil data dari Wikipedia Bahasa Inggris untuk memastikan kelengkapan dan akurasi informasi.
+          </div>
+
+          <div class="faq-question" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('open')">
+            Bagaimana cara menyimpan artikel?
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Klik ikon bookmark di halaman artikel atau di pojok kanan atas navbar. Artikel yang disimpan akan muncul di halaman Bookmark dan bisa diakses kapan saja.
+          </div>
+
+          <div class="faq-question" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('open')">
+            Apa itu fitur AI Ringkasan?
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            AI Ringkasan adalah fitur yang secara otomatis merangkum artikel panjang menjadi poin-poin penting yang mudah dipahami. Cocok untuk belajar cepat atau preview sebelum membaca artikel lengkap.
+          </div>
+
+          <div class="faq-question" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('open')">
+            Bagaimana cara mengakses di perangkat mobile?
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            WikiPelajar AI sudah dirancang mobile-first dan responsif di semua perangkat. Kamu bisa mengaksesnya melalui browser di smartphone, tablet, laptop, atau desktop.
+          </div>
+
+          <div class="faq-question" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('open')">
+            Apakah data bookmark saya aman?
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Data bookmark dan riwayat disimpan di localStorage browser kamu masing-masing. Data tidak dikirim ke server manapun dan hanya bisa diakses dari perangkat yang kamu gunakan.
+          </div>
+
+          <div class="faq-question" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('open')">
+            Bagaimana cara berkontribusi atau melaporkan bug?
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            WikiPelajar AI adalah project open-source. Kamu bisa berkontribusi atau melaporkan bug melalui repository GitHub kami. Lihat link di footer untuk informasi lebih lanjut.
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="footer-brand">WikiPelajar AI</div>
+          <p class="footer-desc">Ensiklopedia pintar berbasis Wikipedia untuk pelajar Indonesia.</p>
+        </div>
+        <div class="col-md-2">
+          <div class="footer-title">Fitur</div>
+          <div class="footer-links">
+            <a href="search.html">Pencarian</a>
+            <a href="explore.html">Jelajahi</a>
+            <a href="trending.html">Populer</a>
+            <a href="quiz.html">Quiz</a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="footer-title">Bantuan</div>
+          <div class="footer-links">
+            <a href="about.html">Tentang</a>
+            <a href="about.html#faq">FAQ</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer-title">Didukung Oleh</div>
+          <div class="footer-links">
+            <a href="https://id.wikipedia.org" target="_blank" rel="noopener">Wikipedia API</a>
+            <a href="https://getbootstrap.com" target="_blank" rel="noopener">Bootstrap 5</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 WikiPelajar AI. Dibuat dengan <i class="bi bi-heart-fill" style="color:#EF4444"></i> untuk pelajar Indonesia.</span>
+        <span>Proyek Independen - Tidak terafiliasi dengan Wikipedia</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="fab" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
